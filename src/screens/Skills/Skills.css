@@ -1,0 +1,146 @@
+/* --------------   START: Skills Section --------------*/
+.skills-section {
+    padding: 70px 0;
+    /* min-height: 80vh; */
+    /* display: flex;
+    align-items: center; */
+
+    /* background-color: rgb(226, 226, 226); */
+}
+
+.skills-section .section-header {
+    margin-bottom: 35px;
+}
+
+.skills-widget {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 25px;
+    position: relative;
+}
+
+
+.skills-widget:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 322px;
+    height: 308px;
+    border-radius: 50%;
+    background: linear-gradient(260deg, var(--theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+    filter: blur(150px);
+    margin-left: -10%;
+    z-index: -1;
+}
+
+
+.skills-widget .skill-item {
+    text-align: center;
+    height: 180px;
+}
+
+.skills-widget .skill-inner {
+    border-radius: 25px;
+    padding: 40px 40px 25px 40px;
+    background: var(--theme-accent-2);
+    border: 1px solid transparent;
+    transition: 0.6s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.skills-widget .skill-item:hover .skill-inner {
+    background: var(--theme-secondary);
+    border: 1px solid var(--theme-primary);
+}
+
+.skills-widget .skill-item .icon-box {
+    width: 80px;
+    height: 80px;
+}
+
+.skills-widget .skill-item .icon-box img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+/*** custom skills icons size ****/
+
+.skills-widget .skill-item .icon-box .git,
+.docker,
+.node,
+.express,
+.tailwind {
+    transform: scale(0.75);
+}
+
+.skills-widget .skill-item .icon-box .react {
+    transform: scale(1.15);
+}
+
+.skills-widget .skill-item .icon-box .redux {
+    transform: scale(1.09);
+}
+
+/****** hover ****/
+
+.skills-widget .skill-item:hover .icon-box img {
+    transform: scale(1.15);
+}
+
+
+.skills-widget .skill-item:hover .icon-box .git,
+.skills-widget .skill-item:hover .icon-box .docker,
+.skills-widget .skill-item:hover .icon-box .node,
+.skills-widget .skill-item:hover .icon-box .express,
+.skills-widget .skill-item:hover .icon-box .tailwind {
+    transform: scale(0.90);
+}
+
+
+.skills-widget .skill-item:hover .icon-box .react {
+    transform: scale(1.30);
+}
+
+.skills-widget .skill-item:hover .icon-box .redux {
+    transform: scale(1.24);
+}
+
+.skills-widget .skill-item .name {
+    color: var(--grey-1);
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.skills-widget .skill-item:hover .name {
+    color: var(--theme-primary);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .skills-widget:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 322px;
+        height: 308px;
+        border-radius: 50%;
+        background: linear-gradient(260deg, var(--theme-primary) 0%, rgba(115, 67, 210, 0) 100%);
+        filter: blur(150px);
+        margin-right: -10%;
+        z-index: -1;
+    }
+    
+
+}
